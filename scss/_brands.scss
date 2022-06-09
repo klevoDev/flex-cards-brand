@@ -1,0 +1,49 @@
+.brands {
+    &__header {
+        font-family: "Arial", sans-serif;
+
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 160%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #121920;
+
+        margin-bottom: 30px;
+    }
+
+    &__row {
+        display: flex;
+        margin: 0 -15px;
+    }
+
+    &__column {
+        padding: 15px;
+        flex: 0 1 21%;
+    }
+
+    &__item {
+        padding: 28px 17px;
+        border: 1px solid #ebebf1;
+
+        &:hover {
+            box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(164, 164, 164, 0.03);
+            border-radius: 5px;
+        }
+    }
+
+    &__wrap-image {
+    }
+
+    &__image {
+    }
+}
+
+@media (max-width: 1440px) {
+    .brands {
+        &__row {
+            flex-wrap: wrap;
+            justify-content: start;
+        }
+    }
+}
