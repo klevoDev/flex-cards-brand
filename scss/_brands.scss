@@ -1,5 +1,5 @@
 .brands {
-    &__header {
+    &__heading {
         font-family: "Arial", sans-serif;
 
         font-weight: 700;
@@ -14,36 +14,76 @@
 
     &__row {
         display: flex;
+        flex-wrap: wrap;
         margin: 0 -15px;
     }
 
     &__column {
         padding: 15px;
-        flex: 0 1 21%;
+        flex: 0 1 25%;
     }
 
     &__item {
-        padding: 28px 17px;
+        padding: 15px;
         border: 1px solid #ebebf1;
+        height: 120px;
 
         &:hover {
             box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(164, 164, 164, 0.03);
             border-radius: 5px;
         }
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &__wrap-image {
     }
 
     &__image {
+        max-width: 100%;
     }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1240px) {
+    // # 768
+    .brands {
+        &__heading {
+            font-size: 28px;
+        }
+        &__row {
+            margin: -10px;
+        }
+        &__column {
+            flex: 0 1 33.3334%;
+            padding: 10px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
     .brands {
         &__row {
-            flex-wrap: wrap;
-            justify-content: start;
+            justify-content: center;
+        }
+        &__column {
+            flex: 0 1 50%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .brands {
+        &__column {
+            flex: 0 1 75%;
+        }
+    }
+}
+
+@media (max-width: 375) {
+    .brands {
+        &__column {
+            flex: 0 1 100%;
         }
     }
 }

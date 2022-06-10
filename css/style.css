@@ -46,9 +46,12 @@ h6 {
 .container {
   max-width: 1170px;
   margin: 0 auto;
+  padding: 0 20px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
-.brands__header {
+.brands__heading {
   font-family: "Arial", sans-serif;
   font-weight: 700;
   font-size: 36px;
@@ -63,19 +66,31 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0 -15px;
 }
 
 .brands__column {
   padding: 15px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 21%;
-          flex: 0 1 21%;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
 }
 
 .brands__item {
-  padding: 28px 17px;
+  padding: 15px;
   border: 1px solid #ebebf1;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .brands__item:hover {
@@ -84,12 +99,50 @@ h6 {
   border-radius: 5px;
 }
 
-@media (max-width: 1440px) {
+.brands__image {
+  max-width: 100%;
+}
+
+@media (max-width: 1240px) {
+  .brands__heading {
+    font-size: 28px;
+  }
   .brands__row {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    margin: -10px;
+  }
+  .brands__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 33.3334%;
+            flex: 0 1 33.3334%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .brands__row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .brands__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .brands__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 75%;
+            flex: 0 1 75%;
+  }
+}
+
+@media (max-width: 375) {
+  .brands__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
   }
 }
